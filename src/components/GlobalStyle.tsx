@@ -21,6 +21,7 @@ const Styles = createGlobalStyle`
 
   body {
     font-family: var(--family);
+    font-style: normal;
     background: var(--colors-bg);
     min-width: var(--sizes-min);
     max-width: var(--sizes-max);
