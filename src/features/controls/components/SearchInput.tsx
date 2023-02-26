@@ -7,12 +7,13 @@ const StyledSearchInput = styled.input.attrs({
   type: 'text',
   placeholder: 'Введи имя, тег, почту...',
 })`
+  box-sizing: border-box;
   width: 100%;
-  padding-left: 31px;
+  padding: 0 31px;
   outline: none;
   border: none;
   color: var(--text-color-primary);
-  background: #f7f7f8 url(${searchInactiveIcon}) no-repeat;
+  background: url(${searchInactiveIcon}) no-repeat;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
@@ -25,7 +26,7 @@ const StyledSearchInput = styled.input.attrs({
     color: transparent;
   }
   &:focus {
-    background: #f7f7f8 url(${searchActiveIcon}) no-repeat;
+    background: url(${searchActiveIcon}) no-repeat;
   }
 `;
 
