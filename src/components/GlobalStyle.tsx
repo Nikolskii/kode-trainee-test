@@ -7,12 +7,14 @@ const Styles = createGlobalStyle`
   :root {
     /* Typography */
     --family: 'Inter', Arial, sans-serif;
-    --text-color-primary: #050510;
-    --text-color-secondary-light: #97979B;
-    --text-color-secondary-dark: #55555C;
+
 
     /* Colors */
     --colors-bg: #fff;
+    --colors-accent: #6534ff;
+    --text-color-primary: #050510;
+    --text-color-secondary-light: #97979B;
+    --text-color-secondary-dark: #55555C;
 
     /* Sizes */
     --sizes-min: 320px;
