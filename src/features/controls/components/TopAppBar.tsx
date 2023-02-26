@@ -1,4 +1,5 @@
 import Title from '../../../components/Title';
+import NavBar from './NavBar';
 import SearchBar from './SearchBar';
 
 const TopAppBar = () => {
@@ -6,6 +7,7 @@ const TopAppBar = () => {
     <div>
       <Title>Поиск</Title>
       <SearchBar />
+      <NavBar />
     </div>
   );
 };
