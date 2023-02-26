@@ -5,10 +5,12 @@ interface NavBarLinkProps {
 }
 
 export const NavBarLink = styled.button<NavBarLinkProps>`
-  font-weight: ${({ active }) => (active ? 600 : 500)};
-  color: ${({ active }) => (active ? '#050510' : '#97979b')};
-  border-bottom: ${({ active }) => (active ? '2px solid #6534ff' : 'none')};
   border: none;
+  border-bottom: ${({ active }) =>
+    active ? '2px solid var(--colors-accent)' : 'none'};
+  color: ${({ active }) =>
+    active ? 'var(--text-color-primary)' : 'var(--text-color-secondary-light)'};
+  font-weight: ${({ active }) => (active ? 600 : 500)};
   background-color: transparent;
   padding: 0;
   font-weight: 500;

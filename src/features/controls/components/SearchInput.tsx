@@ -20,7 +20,7 @@ const StyledSearchInput = styled.input.attrs({
   caret-color: var(--colors-accent);
   &::placeholder {
     font-weight: 500;
-    color: #c3c3c6;
+    color: var(--colors-rest);
   }
   &:focus::placeholder {
     color: transparent;

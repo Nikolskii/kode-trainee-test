@@ -1,12 +1,7 @@
 import { useState } from 'react';
-import styled from 'styled-components';
 
 import { NavBarList } from './NavBarList';
-import { NavBarListItem } from './NavBarListItem';
-import { NavBarLink } from './NavBarLink';
-import { links } from '../../../config';
-
-const StyledNavBar = styled.nav``;
+import LinksList from './LinksList';
 
 const NavBar = () => {
   const [currentLink, setCurrentLink] = useState('all');
@@ -15,21 +10,12 @@ const NavBar = () => {
     setCurrentLink(department);
   };
 
-  const linksList = links.map((link) => (
-    <NavBarListItem key={link.name}>
-      <NavBarLink
-        active={link.path === currentLink}
-        onClick={() => handleLinkClick(link.path)}
-      >
-        {link.name}
-      </NavBarLink>
-    </NavBarListItem>
-  ));
-
   return (
-    <StyledNavBar>
-      <NavBarList>{linksList}</NavBarList>
-    </StyledNavBar>
+    <nav>
+      <NavBarList>
+        <LinksList handleClick={handleLinkClick} currentLink={currentLink} />
+      </NavBarList>
+    </nav>
   );
 };
 

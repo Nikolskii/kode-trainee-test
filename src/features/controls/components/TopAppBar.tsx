@@ -1,14 +1,24 @@
+import styled from 'styled-components';
+
 import Title from '../../../components/Title';
-import NavBar from './NavBar';
 import SearchBar from './SearchBar';
+import NavBar from './NavBar';
+
+const StyledTopAppBar = styled.section`
+  padding: 16px 16px 0;
+  border-bottom: 0.3px solid var(--colors-rest);
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+`;
 
 const TopAppBar = () => {
   return (
-    <div>
+    <StyledTopAppBar>
       <Title>Поиск</Title>
       <SearchBar />
       <NavBar />
-    </div>
+    </StyledTopAppBar>
   );
 };
 
