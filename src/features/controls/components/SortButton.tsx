@@ -1,7 +1,16 @@
-import React from 'react';
+import styled from 'styled-components';
 
-const SortButton = () => {
-  return <div>SortButton</div>;
-};
+import sortIcon from '../../../images/sort-icon.svg';
 
-export default SortButton;
+export const SortButton = styled.button`
+  width: 21px;
+  height: 12px;
+  /* background: #f7f7f8 url(${sortIcon}) no-repeat; */
+  background: url(${sortIcon}) no-repeat;
+  border: none;
+  transition: opacity 0.4s;
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+`;
