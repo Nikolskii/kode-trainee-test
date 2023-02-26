@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
-import { useSelector } from 'react-redux';
-import { isModalOpen } from '../modalSelectors';
-import ModalDialog from './ModalDialog';
 
+import useModal from '../useModal';
+import ModalDialog from './ModalDialog';
 import { StyledModal } from './StyledModal';
 
 export interface ModalProps {
@@ -11,7 +10,7 @@ export interface ModalProps {
 }
 
 const Modal = ({ children, title }: ModalProps) => {
-  const { isOpen } = useSelector(isModalOpen);
+  const [isOpen] = useModal();
 
   return (
     <StyledModal isOpen={isOpen}>

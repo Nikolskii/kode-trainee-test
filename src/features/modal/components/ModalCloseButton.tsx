@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import closeIcon from '../../../images/close-icon.svg';
 
-const StyledModalCloseButton = styled.button`
+export const ModalCloseButton = styled.button`
   position: absolute;
   top: 24px;
   right: 24px;
@@ -17,9 +17,3 @@ const StyledModalCloseButton = styled.button`
     cursor: pointer;
   }
 `;
-
-const ModalCloseButton = () => {
-  return <StyledModalCloseButton />;
-};
-
-export default ModalCloseButton;

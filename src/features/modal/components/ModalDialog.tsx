@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 import { ModalProps } from './Modal';
 import { ModalTitle } from './ModalTitle';
-import ModalCloseButton from './ModalCloseButton';
+import { ModalCloseButton } from './ModalCloseButton';
+import useModal from '../useModal';
 
 const StyledModalDialog = styled.section`
   width: 373px;
@@ -18,11 +19,13 @@ const StyledModalDialog = styled.section`
 `;
 
 const ModalDialog = ({ children, title }: ModalProps) => {
+  const [isOpen, toggleIsOpen] = useModal();
+
   return (
     <StyledModalDialog>
       <ModalTitle>{title}</ModalTitle>
       {children}
-      <ModalCloseButton />
+      <ModalCloseButton onClick={toggleIsOpen} />
     </StyledModalDialog>
   );
 };
