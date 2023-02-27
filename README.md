@@ -2,8 +2,6 @@
 
 Тестовое задание на стажировку в KODE
 
-[Канбак-доска](https://github.com/users/Nikolskii/projects/6/views/1)
-
 [Описание тестового задания](https://github.com/appKODE/trainee-test-frontend)
 
 [Макет в Figma](https://www.figma.com/file/GRRKONipVClULsfdCAuVs1/KODE-Trainee-Dev-Осень'21?node-id=11%3A14414)

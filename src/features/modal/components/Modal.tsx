@@ -10,12 +10,17 @@ export interface ModalProps {
 }
 
 const Modal = ({ children, title }: ModalProps) => {
-  const [isOpen] = useModal();
+  const [isOpen, toggleIsOpen] = useModal();
 
   return (
-    <StyledModal isOpen={isOpen}>
-      <ModalDialog title={title}>{children}</ModalDialog>
-    </StyledModal>
+    <>
+      {isOpen && (
+        <>
+          <StyledModal isOpen={isOpen} onClick={toggleIsOpen} />
+          <ModalDialog title={title}>{children}</ModalDialog>
+        </>
+      )}
+    </>
   );
 };
 

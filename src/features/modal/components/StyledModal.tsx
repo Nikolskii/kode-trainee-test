@@ -11,10 +11,4 @@ export const StyledModal = styled.div<StyledModalProps>`
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
-  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
-  transition: visibility 0.3s, opacity 0.3s;
 `;
