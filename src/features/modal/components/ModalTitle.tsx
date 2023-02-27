@@ -6,4 +6,5 @@ export const ModalTitle = styled.h2`
   line-height: 24px;
   color: var(--text-color-primary);
   margin: 0;
+  text-align: center;
 `;

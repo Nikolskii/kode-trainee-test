@@ -2,12 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 
 type ControlsSlice = {
   search: string;
-  sort: 'onAlphabet' | 'onBirthday';
+  sort: 'alphabet' | 'birthday';
 };
 
 const initialState: ControlsSlice = {
   search: '',
-  sort: 'onAlphabet',
+  sort: 'alphabet',
 };
 
 const controlsSlice = createSlice({
