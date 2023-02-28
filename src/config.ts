@@ -1,5 +1,10 @@
 import { Link } from './types';
 
+const BASE_URL =
+  'https://stoplight.io/mocks/kode-frontend-team/koder-stoplight/86566464/users?__example=';
+
+export const ALL_EMPLOYEES = BASE_URL + 'all';
+
 export const links: Link[] = [
   { name: 'Все', path: 'all' },
   { name: 'Designers', path: 'design' },
