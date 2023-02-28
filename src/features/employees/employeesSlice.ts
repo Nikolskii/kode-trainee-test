@@ -1,7 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  employees: [],
+import { Employee, Status } from '../../types';
+
+type EmployeesSlice = {
+  list: Employee[];
+  status: Status;
+  error: string | null;
+};
+
+const initialState: EmployeesSlice = {
+  list: [],
+  status: 'idle',
+  error: null,
 };
 
 const employeesSlice = createSlice({
