@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import SortOptionInput from './SortOptionInput';
-import { SortOptionPseudo } from './SortOptionPseudo';
-import { SortOptionSpan } from './SortOptionSpan';
+import Input from './Input';
+import { Pseudo } from './Pseudo';
+import { OptionName } from './OptionName';
 
 interface SortOptionProps {
   option: string;
@@ -17,9 +17,9 @@ const StyledSortOption = styled.label`
 const SortOption = ({ option, isChecked, optionName }: SortOptionProps) => {
   return (
     <StyledSortOption htmlFor={option}>
-      <SortOptionInput id={option} />
-      <SortOptionPseudo isChecked={isChecked} />
-      <SortOptionSpan>{optionName}</SortOptionSpan>
+      <Input id={option} />
+      <Pseudo isChecked={isChecked} />
+      <OptionName>{optionName}</OptionName>
     </StyledSortOption>
   );
 };

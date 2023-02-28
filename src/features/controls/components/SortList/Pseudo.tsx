@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-interface SortOptionPseudoProps {
+interface PseudoProps {
   isChecked: boolean;
 }
 
-export const SortOptionPseudo = styled.span<SortOptionPseudoProps>`
+export const Pseudo = styled.span<PseudoProps>`
   display: inline-block;
   box-sizing: border-box;
   vertical-align: middle;
