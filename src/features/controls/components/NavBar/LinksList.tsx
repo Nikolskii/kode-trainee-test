@@ -1,5 +1,5 @@
 import { links } from '../../../../config';
-import { NavBarLink } from '../NavBarLink';
+import { Link } from './Link';
 
 interface LinksListProps {
   handleClick: (department: string) => void;
@@ -9,12 +9,12 @@ interface LinksListProps {
 const LinksList = ({ handleClick, currentLink }: LinksListProps) => {
   const linksList = links.map((link) => (
     <li key={link.name}>
-      <NavBarLink
+      <Link
         active={link.path === currentLink}
         onClick={() => handleClick(link.path)}
       >
         {link.name}
-      </NavBarLink>
+      </Link>
     </li>
   ));
 

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-interface NavBarLinkProps {
+interface LinkProps {
   active: boolean;
 }
 
-export const NavBarLink = styled.button<NavBarLinkProps>`
+export const Link = styled.button<LinkProps>`
   border: none;
   border-bottom: ${({ active }) =>
     active ? '2px solid var(--colors-accent)' : 'none'};
