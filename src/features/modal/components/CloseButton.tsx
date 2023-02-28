@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import closeIcon from '../../../images/close-icon.svg';
 
-export const ModalCloseButton = styled.button`
+export const CloseButton = styled.button`
   position: absolute;
   top: 24px;
   right: 24px;

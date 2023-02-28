@@ -1,6 +1,6 @@
 import { ModalProps } from './Modal';
-import { ModalTitle } from './ModalTitle';
-import { ModalCloseButton } from './ModalCloseButton';
+import { Title } from './Title';
+import { CloseButton } from './CloseButton';
 import { StyledModalDialog } from './StyledModalDialog';
 import useModal from '../useModal';
 
@@ -9,9 +9,9 @@ const ModalDialog = ({ children, title }: ModalProps) => {
 
   return (
     <StyledModalDialog>
-      <ModalTitle>{title}</ModalTitle>
+      <Title>{title}</Title>
       {children}
-      <ModalCloseButton onClick={toggleIsOpen} />
+      <CloseButton onClick={toggleIsOpen} />
     </StyledModalDialog>
   );
 };
