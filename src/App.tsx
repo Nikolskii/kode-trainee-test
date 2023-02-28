@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import ErrorMessage from './components/ErrorMessage/ErrorMessage';
 
 import EmployeePage from './pages/EmployeePage';
 import EmployeesPage from './pages/EmployeesPage';
@@ -9,7 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<EmployeesPage />} />
         <Route path="/details/:employeeId" element={<EmployeePage />} />
-        {/* <Route path="*" element={<PageNotFound />} /> */}
+        <Route path="*" element={<ErrorMessage isPageNotFound />} />
       </Routes>
     </>
   );

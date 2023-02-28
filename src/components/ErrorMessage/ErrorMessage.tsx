@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Button } from './Button';
@@ -26,6 +27,8 @@ const ErrorMessage = ({
   isUserNotFound,
   isPageNotFound,
 }: ErrorMessageProps) => {
+  const navigate = useNavigate();
+
   return (
     <StyledErrorMessage>
       {isError && (
@@ -47,7 +50,7 @@ const ErrorMessage = ({
         <>
           <Img src={notFoundImg} alt="Страница не найдена" />
           <Title>Страница не найдена</Title>
-          <Button>Вернуться на главную</Button>
+          <Button onClick={() => navigate('/')}>Вернуться на главную</Button>
         </>
       )}
     </StyledErrorMessage>
