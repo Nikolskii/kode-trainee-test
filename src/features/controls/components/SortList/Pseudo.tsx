@@ -10,6 +10,7 @@ export const Pseudo = styled.span<PseudoProps>`
   vertical-align: middle;
   width: 20px;
   height: 20px;
-  border: ${({ isChecked }) => (isChecked ? '7px' : '2px')} solid #6534ff;
+  border: ${({ isChecked }) => (isChecked ? '7px' : '2px')} solid
+    var(--colors-accent);
   border-radius: 50%;
 `;
