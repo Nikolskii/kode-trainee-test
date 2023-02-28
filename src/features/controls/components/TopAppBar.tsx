@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Title from '../../../components/Title';
 import SearchBar from './SearchBar/SearchBar';
-import NavBar from './NavBar';
+import NavBar from './NavBar/NavBar';
 
 const StyledTopAppBar = styled.section`
   padding: 16px 16px 0;

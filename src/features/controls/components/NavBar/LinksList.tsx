@@ -1,5 +1,5 @@
-import { links } from '../../../config';
-import { NavBarLink } from './NavBarLink';
+import { links } from '../../../../config';
+import { NavBarLink } from '../NavBarLink';
 
 interface LinksListProps {
   handleClick: (department: string) => void;
