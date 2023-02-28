@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import sortIcon from '../../../images/sort-icon.svg';
+import sortIcon from '../../../../images/sort-icon.svg';
 
 export const SortButton = styled.button`
   width: 21px;

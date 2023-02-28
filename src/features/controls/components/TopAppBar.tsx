@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import Title from '../../../components/Title';
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBar/SearchBar';
 import NavBar from './NavBar';
 
 const StyledTopAppBar = styled.section`

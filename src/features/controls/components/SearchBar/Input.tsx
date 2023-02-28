@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import searchActiveIcon from '../../../images/search-active-icon.svg';
-import searchInactiveIcon from '../../../images/search-inactive-icon.svg';
+import searchActiveIcon from '../../../../images/search-active-icon.svg';
+import searchInactiveIcon from '../../../../images/search-inactive-icon.svg';
 
-const StyledSearchInput = styled.input.attrs({
+export const Input = styled.input.attrs({
   type: 'text',
   placeholder: 'Введи имя, тег, почту...',
 })`
@@ -29,9 +29,3 @@ const StyledSearchInput = styled.input.attrs({
     background: url(${searchActiveIcon}) no-repeat;
   }
 `;
-
-const SearchInput = () => {
-  return <StyledSearchInput />;
-};
-
-export default SearchInput;
