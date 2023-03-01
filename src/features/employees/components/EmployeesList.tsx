@@ -1,12 +1,14 @@
-import Employee from './Employee';
+import useEmployees from '../useEmployees';
+import EmployeeCard from './EmployeeCard';
 
 const EmployeesList = () => {
+  const [employees] = useEmployees();
+
   return (
     <>
-      <Employee />
-      <Employee />
-      <Employee />
-      <Employee />
+      {employees.map((employee) => (
+        <EmployeeCard {...employee} key={employee.id} />
+      ))}
     </>
   );
 };
