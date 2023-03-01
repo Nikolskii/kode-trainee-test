@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import { Employee } from '../../../types';
 
+import { Employee } from '../../../types';
 import Avatar from './Avatar';
 import Birthday from './Birthday';
 import Name from './Name';
@@ -18,17 +17,9 @@ const StyledEmployeeCard = styled.article`
 
 interface EmployeeProps extends Employee {}
 
-const EmployeeCard = ({
-  id,
-  avatarUrl,
-  firstName,
-  lastName,
-  userTag,
-  department,
-  position,
-  birthday,
-  phone,
-}: EmployeeProps) => {
+const EmployeeCard = (props: EmployeeProps) => {
+  const { avatarUrl, firstName, lastName, userTag, position, birthday } = props;
+
   return (
     <StyledEmployeeCard>
       <Avatar src={avatarUrl} />

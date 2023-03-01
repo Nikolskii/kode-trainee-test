@@ -1,4 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { LinkName } from '../../types';
 
 type ControlsSlice = {
   search: string;
@@ -21,7 +22,11 @@ const initialState: ControlsSlice = {
 const controlsSlice = createSlice({
   name: 'controls',
   initialState,
-  reducers: {},
+  reducers: {
+    setDepartament: (state, action: PayloadAction<LinkName>) => {
+      state.departament = action.payload;
+    },
+  },
 });
 
 export const controlsReducer = controlsSlice.reducer;

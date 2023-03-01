@@ -1,4 +1,12 @@
+export type LinkName =
+  | 'Все'
+  | 'Designers'
+  | 'Analysts'
+  | 'Managers'
+  | 'iOS'
+  | 'Android';
+
 export type Link = {
-  name: string;
+  name: LinkName;
   path: string;
 };
