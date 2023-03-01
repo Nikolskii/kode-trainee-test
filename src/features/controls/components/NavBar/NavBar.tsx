@@ -2,18 +2,13 @@ import { useState } from 'react';
 
 import { NavBarList } from './NavBarList';
 import LinksList from './LinksList';
+import useDepartament from '../../useDepartament';
 
 const NavBar = () => {
-  const [currentLink, setCurrentLink] = useState('all');
-
-  const handleLinkClick = (department: string) => {
-    setCurrentLink(department);
-  };
-
   return (
     <nav>
       <NavBarList>
-        <LinksList handleClick={handleLinkClick} currentLink={currentLink} />
+        <LinksList />
       </NavBarList>
     </nav>
   );

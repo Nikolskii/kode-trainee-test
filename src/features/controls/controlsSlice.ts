@@ -4,13 +4,7 @@ import { LinkName } from '../../types';
 type ControlsSlice = {
   search: string;
   sort: 'alphabet' | 'birthday';
-  departament:
-    | 'Все'
-    | 'Designers'
-    | 'Analysts'
-    | 'Managers'
-    | 'iOS'
-    | 'Android';
+  departament: LinkName;
 };
 
 const initialState: ControlsSlice = {
@@ -29,4 +23,5 @@ const controlsSlice = createSlice({
   },
 });
 
+export const { setDepartament } = controlsSlice.actions;
 export const controlsReducer = controlsSlice.reducer;
