@@ -1,23 +1,23 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { LinkName } from '../../types';
+import { Sort } from '../../types';
 
-type ControlsSlice = {
+export type ControlsSlice = {
   search: string;
-  sort: 'alphabet' | 'birthday';
-  departament: LinkName;
+  sort: Sort;
+  departament: string;
 };
 
 const initialState: ControlsSlice = {
   search: '',
   sort: 'alphabet',
-  departament: 'Все',
+  departament: 'all',
 };
 
 const controlsSlice = createSlice({
   name: 'controls',
   initialState,
   reducers: {
-    setDepartament: (state, action: PayloadAction<LinkName>) => {
+    setDepartament: (state, action: PayloadAction<string>) => {
       state.departament = action.payload;
     },
   },

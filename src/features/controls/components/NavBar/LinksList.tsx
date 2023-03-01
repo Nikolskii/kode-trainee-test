@@ -8,8 +8,8 @@ const LinksList = () => {
   const linksList = links.map((link) => (
     <li key={link.name}>
       <Link
-        active={link.name === departament}
-        onClick={() => handleDepartament(link.name)}
+        active={link.path === departament}
+        onClick={() => handleDepartament(link.path)}
       >
         {link.name}
       </Link>

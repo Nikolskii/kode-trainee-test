@@ -1,15 +1,14 @@
 import { useSelector } from 'react-redux';
 
 import { useAppDispatch } from '../../app/hooks';
-import { LinkName } from '../../types';
 import { selectDepartment } from './controlsSelectors';
 import { setDepartament } from './controlsSlice';
 
-const useDepartament = (): [LinkName, (departament: LinkName) => void] => {
+const useDepartament = (): [string, (departament: string) => void] => {
   const dispatch = useAppDispatch();
   const departament = useSelector(selectDepartment);
 
-  const handleDepartament = (departament: LinkName) => {
+  const handleDepartament = (departament: string) => {
     dispatch(setDepartament(departament));
   };
 
