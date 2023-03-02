@@ -31,7 +31,11 @@ export const selectSortedEmployees = (
       (employee) => employee.department === departament,
     );
 
-  // Сортировка по алфавиту, дню рождения
+  // Сортировка по алфавиту
+  if (sort === 'alphabet')
+    filteredEmployess = [...filteredEmployess].sort((a, b) =>
+      a.firstName.localeCompare(b.firstName),
+    );
 
   return filteredEmployess;
 };
