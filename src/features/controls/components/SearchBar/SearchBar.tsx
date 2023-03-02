@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import useModal from '../../../modal/useModal';
+import useSearch from '../../useSearch';
 import Form from './Form';
 import { Input } from './Input';
 import { SortButton } from './SortButton';
@@ -16,11 +17,12 @@ const StyledSearchBar = styled.section`
 
 const SearchBar = () => {
   const [isOpen, toggleIsOpen] = useModal();
+  const [search, handleSearch] = useSearch();
 
   return (
     <StyledSearchBar>
       <Form>
-        <Input />
+        <Input value={search} onChange={handleSearch} />
       </Form>
       <SortButton onClick={toggleIsOpen} />
     </StyledSearchBar>

@@ -8,5 +8,7 @@ export const selectSortedEmployees = (
   state: RootState,
   { search, sort, departament }: ControlsSlice,
 ) => {
+  console.log(sort);
+
   return state.employees.list;
 };
