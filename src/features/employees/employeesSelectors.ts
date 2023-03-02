@@ -8,5 +8,30 @@ export const selectSortedEmployees = (
   state: RootState,
   { search, sort, departament }: ControlsSlice,
 ) => {
-  return state.employees.list;
+  console.log(`
+    search: ${search}, 
+    sort: ${sort}, 
+    departament: ${departament}
+  `);
+
+  let filteredEmployess = state.employees.list;
+
+  // Фильтр по имени, фамилии, тегу
+  if (search.length > 0)
+    filteredEmployess = filteredEmployess.filter(
+      (employee) =>
+        employee.firstName.toLowerCase().includes(search.toLowerCase()) ||
+        employee.lastName.toLowerCase().includes(search.toLowerCase()) ||
+        employee.userTag.toLowerCase().includes(search.toLowerCase()),
+    );
+
+  // Фильтр по департаменту
+  if (departament !== 'all')
+    filteredEmployess = filteredEmployess.filter(
+      (employee) => employee.department === departament,
+    );
+
+  // Сортировка по алфавиту, дню рождения
+
+  return filteredEmployess;
 };
