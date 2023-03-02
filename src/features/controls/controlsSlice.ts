@@ -17,11 +17,14 @@ const controlsSlice = createSlice({
   name: 'controls',
   initialState,
   reducers: {
+    setSearch: (state, action: PayloadAction<string>) => {
+      state.search = action.payload;
+    },
     setDepartament: (state, action: PayloadAction<string>) => {
       state.departament = action.payload;
     },
   },
 });
 
-export const { setDepartament } = controlsSlice.actions;
+export const { setSearch, setDepartament } = controlsSlice.actions;
 export const controlsReducer = controlsSlice.reducer;
