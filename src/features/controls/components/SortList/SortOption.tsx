@@ -8,15 +8,21 @@ interface SortOptionProps {
   option: string;
   isChecked: boolean;
   optionName: string;
+  onClick: () => void;
 }
 
 const StyledSortOption = styled.label`
   display: block;
 `;
 
-const SortOption = ({ option, isChecked, optionName }: SortOptionProps) => {
+const SortOption = ({
+  option,
+  isChecked,
+  optionName,
+  onClick,
+}: SortOptionProps) => {
   return (
-    <StyledSortOption htmlFor={option}>
+    <StyledSortOption htmlFor={option} onClick={onClick}>
       <Input id={option} />
       <Pseudo isChecked={isChecked} />
       <OptionName>{optionName}</OptionName>

@@ -1,1 +1,4 @@
-export type Sort = 'alphabet' | 'birthday';
+export type Sort = {
+  name: string;
+  value: string;
+};
