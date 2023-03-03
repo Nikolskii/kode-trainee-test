@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import EmployeesList from './EmployeesList';
+import LoadingList from './LoadingList';
 
 const StyledEmployees = styled.ul`
   margin: 0;
@@ -13,6 +14,7 @@ const StyledEmployees = styled.ul`
 const Employees = () => {
   return (
     <StyledEmployees>
+      <LoadingList />
       <EmployeesList />
     </StyledEmployees>
   );
