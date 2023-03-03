@@ -1,5 +1,6 @@
 import useSort from '../../controls/useSort';
 import useEmployees from '../useEmployees';
+import DividingLine from './DividingLine';
 import EmployeeCard from './EmployeeCard';
 
 const EmployeesList = () => {
@@ -18,7 +19,7 @@ const EmployeesList = () => {
           {currentYearEmployees.map((employee) => (
             <EmployeeCard {...employee} sort={sort} key={employee.id} />
           ))}
-          {nextYearEmployees.length > 0 && <p>2023</p>}
+          {nextYearEmployees.length > 0 && <DividingLine />}
 
           {nextYearEmployees.map((employee) => (
             <EmployeeCard {...employee} sort={sort} key={employee.id} />
