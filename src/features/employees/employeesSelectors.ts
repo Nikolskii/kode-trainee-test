@@ -2,18 +2,10 @@ import { RootState } from '../../app/store';
 
 import { ControlsSlice } from '../controls/controlsSlice';
 
-export const selectAllEmployees = (state: RootState) => state.employees.list;
-
 export const selectSortedEmployees = (
   state: RootState,
   { search, sort, departament }: ControlsSlice,
 ) => {
-  console.log(`
-    search: ${search}, 
-    sort: ${sort}, 
-    departament: ${departament}
-  `);
-
   let filteredEmployess = state.employees.list;
 
   // Фильтр по имени, фамилии, тегу
@@ -35,6 +27,14 @@ export const selectSortedEmployees = (
   if (sort === 'alphabet')
     filteredEmployess = [...filteredEmployess].sort((a, b) =>
       a.firstName.localeCompare(b.firstName),
+    );
+
+  // Сортировка по дню рождения
+  if (sort === 'birthday')
+    filteredEmployess = [...filteredEmployess].sort(
+      (a, b) =>
+        new Date(a.birthday.slice(5)).valueOf() -
+        new Date(b.birthday.slice(5)).valueOf(),
     );
 
   return filteredEmployess;
