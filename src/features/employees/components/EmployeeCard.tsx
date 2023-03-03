@@ -15,10 +15,17 @@ const StyledEmployeeCard = styled.article`
   row-gap: 2px;
 `;
 
-interface EmployeeProps extends Employee {}
+interface EmployeeProps extends Employee {
+  sort?: string;
+}
 
 const EmployeeCard = (props: EmployeeProps) => {
-  const { avatarUrl, firstName, lastName, userTag, position, birthday } = props;
+  const { avatarUrl, firstName, lastName, userTag, position, birthday, sort } =
+    props;
+
+  const formattedDateBirthday = new Date(birthday)
+    .toLocaleDateString('ru-RU', { day: 'numeric', month: 'short' })
+    .slice(0, -1);
 
   return (
     <StyledEmployeeCard>
@@ -28,7 +35,7 @@ const EmployeeCard = (props: EmployeeProps) => {
         <Tag>{userTag}</Tag>
       </Name>
       <Position>{position}</Position>
-      <Birthday>{birthday}</Birthday>
+      {sort === 'birthday' && <Birthday>{formattedDateBirthday}</Birthday>}
     </StyledEmployeeCard>
   );
 };

@@ -8,20 +8,31 @@ import { selectControls } from '../controls/controlsSelectors';
 import { getEmployees } from './employeesAsyncActions';
 import { selectSortedEmployees } from './employeesSelectors';
 
-const useEmployees = (): [Employee[]] => {
+const useEmployees = (): [Employee[], Employee[], Employee[]] => {
   const dispatch = useAppDispatch();
-
   const controls = useSelector(selectControls);
 
-  const employees = useSelector((state: RootState) =>
+  const currentDate = new Date().toISOString().slice(5, 10);
+  const currentYearEmployees: Employee[] = [];
+  const nextYearEmployees: Employee[] = [];
+
+  const allEmployees = useSelector((state: RootState) =>
     selectSortedEmployees(state, controls),
   );
+
+  allEmployees.forEach((employee) => {
+    if (employee.birthday.slice(5, 10) < currentDate) {
+      nextYearEmployees.push(employee);
+    } else {
+      currentYearEmployees.push(employee);
+    }
+  });
 
   useEffect(() => {
     dispatch(getEmployees());
   }, []);
 
-  return [employees];
+  return [allEmployees, currentYearEmployees, nextYearEmployees];
 };
 
 export default useEmployees;
