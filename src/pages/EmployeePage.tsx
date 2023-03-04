@@ -5,11 +5,9 @@ const EmployeePage = () => {
   return (
     <div>
       <Header />
-      {/* <BackButton />
-    </Header>
-    <Main>
-      <EmployeeDetails />
-    </Main> */}
+      {/* <Main>
+        <EmployeeDetails />
+      </Main> */}
     </div>
   );
 };

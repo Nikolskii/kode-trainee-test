@@ -13,6 +13,7 @@ const Styles = createGlobalStyle`
     --colors-bg: #fff;
     --colors-accent: #6534ff;
     --colors-rest: #c3c3c6;
+    --colors-rest-secondary: #f7f7f8;
     --text-color-primary: #050510;
     --text-color-secondary-light: #97979B;
     --text-color-secondary-dark: #55555C;
