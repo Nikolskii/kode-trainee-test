@@ -5,28 +5,29 @@ import Avatar from './Avatar';
 import Birthday from './Birthday';
 import Name from './Name';
 import Position from './Position';
+import StyledLink from './StyledLink';
 import Tag from './Tag';
+
+interface EmployeeProps extends Employee {
+  sort?: string;
+}
 
 const StyledEmployeeCard = styled.article`
   display: flex;
   justify-content: space-between;
 `;
 
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 72px auto;
-  grid-template-rows: auto auto;
-  column-gap: 16px;
-  row-gap: 2px;
-`;
-
-interface EmployeeProps extends Employee {
-  sort?: string;
-}
-
 const EmployeeCard = (props: EmployeeProps) => {
-  const { avatarUrl, firstName, lastName, userTag, position, birthday, sort } =
-    props;
+  const {
+    id,
+    avatarUrl,
+    firstName,
+    lastName,
+    userTag,
+    position,
+    birthday,
+    sort,
+  } = props;
 
   const formattedDateBirthday = new Date(birthday)
     .toLocaleDateString('ru-RU', { day: 'numeric', month: 'short' })
@@ -34,14 +35,14 @@ const EmployeeCard = (props: EmployeeProps) => {
 
   return (
     <StyledEmployeeCard>
-      <Wrapper>
+      <StyledLink to={`employee/${id}`}>
         <Avatar src={avatarUrl} />
         <Name>
           {firstName} {lastName}
           <Tag>{userTag}</Tag>
         </Name>
         <Position>{position}</Position>
-      </Wrapper>
+      </StyledLink>
       {sort === 'birthday' && <Birthday>{formattedDateBirthday}</Birthday>}
     </StyledEmployeeCard>
   );

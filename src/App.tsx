@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<EmployeesPage />} />
-        <Route path="/details/:employeeId" element={<EmployeePage />} />
+        <Route path="/employee/:employeeId" element={<EmployeePage />} />
         <Route path="*" element={<ErrorMessage isPageNotFound />} />
       </Routes>
     </>
