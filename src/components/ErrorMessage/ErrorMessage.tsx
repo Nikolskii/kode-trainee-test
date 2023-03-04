@@ -36,7 +36,9 @@ const ErrorMessage = ({
           <Img src={errorImg} alt="Произошла ошибка" />
           <Title>Какой-то сверхразум все сломал</Title>
           <Subtitle>Постараемся быстро починить</Subtitle>
-          <Button>Попробовать снова</Button>
+          <Button onClick={() => window.location.reload()}>
+            Попробовать снова
+          </Button>
         </>
       )}
       {isUserNotFound && (

@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { Employee, Status } from '../../types';
+import { Employee, Error, Status } from '../../types';
 import { getEmployees } from './employeesAsyncActions';
 
 type EmployeesSlice = {
   list: Employee[];
   status: Status;
-  error: string | null;
+  error: Error;
 };
 
 const initialState: EmployeesSlice = {
@@ -22,9 +22,11 @@ const employeesSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getEmployees.pending, (state) => {
       state.status = 'loading';
+      state.error = null;
     });
-    builder.addCase(getEmployees.rejected, (state) => {
+    builder.addCase(getEmployees.rejected, (state, action) => {
       state.status = 'rejected';
+      state.error = action.error.message;
     });
     builder.addCase(getEmployees.fulfilled, (state, action) => {
       state.status = 'received';

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ErrorMessage from '../../../components/ErrorMessage/ErrorMessage';
 import useEmployees from '../useEmployees';
 import EmployeesList from './EmployeesList';
 import LoadingList from './LoadingList';
@@ -15,11 +16,10 @@ const StyledEmployees = styled.ul`
 const Employees = () => {
   const [status] = useEmployees();
 
-  console.log(status);
-
   return (
     <StyledEmployees>
       {status === 'loading' && <LoadingList />}
+      {status === 'rejected' && <ErrorMessage isError />}
       <EmployeesList />
     </StyledEmployees>
   );
