@@ -5,7 +5,7 @@ const Tag = styled.span`
   font-size: 17px;
   line-height: 22px;
   color: var(--text-color-secondary-light);
-  padding-left: 4px;
+  margin-left: -4px;
 `;
 
 export default Tag;
