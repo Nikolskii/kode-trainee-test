@@ -14,12 +14,13 @@ const StyledEmployees = styled.ul`
 `;
 
 const Employees = () => {
-  const [status] = useEmployees();
+  const [status, allEmployees] = useEmployees();
 
   return (
     <StyledEmployees>
       {status === 'loading' && <LoadingList />}
       {status === 'rejected' && <ErrorMessage isError />}
+      {allEmployees.length === 0 && <ErrorMessage isEmployeesNotFound />}
       <EmployeesList />
     </StyledEmployees>
   );

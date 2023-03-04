@@ -7,7 +7,6 @@ import { Employee, Error, Status } from '../../types';
 import { selectControls } from '../controls/controlsSelectors';
 import { getEmployees } from './employeesAsyncActions';
 import {
-  selectErrorLoading,
   selectSortedEmployees,
   selectStatusLoading,
 } from './employeesSelectors';

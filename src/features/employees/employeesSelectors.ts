@@ -3,7 +3,6 @@ import { RootState } from '../../app/store';
 import { ControlsSlice } from '../controls/controlsSlice';
 
 export const selectStatusLoading = (state: RootState) => state.employees.status;
-export const selectErrorLoading = (state: RootState) => state.employees.error;
 
 export const selectSortedEmployees = (
   state: RootState,

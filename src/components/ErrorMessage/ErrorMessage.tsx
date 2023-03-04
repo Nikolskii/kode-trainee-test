@@ -10,7 +10,7 @@ import notFoundImg from '../../images/not-found-error.svg';
 
 interface ErrorMessageProps {
   isError?: boolean;
-  isUserNotFound?: boolean;
+  isEmployeesNotFound?: boolean;
   isPageNotFound?: boolean;
 }
 
@@ -24,7 +24,7 @@ const StyledErrorMessage = styled.section`
 
 const ErrorMessage = ({
   isError,
-  isUserNotFound,
+  isEmployeesNotFound,
   isPageNotFound,
 }: ErrorMessageProps) => {
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ const ErrorMessage = ({
           </Button>
         </>
       )}
-      {isUserNotFound && (
+      {isEmployeesNotFound && (
         <>
           <Img src={notFoundImg} alt="Сотрудник не найден" />
           <Title>Мы никого не нашли</Title>
