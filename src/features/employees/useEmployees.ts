@@ -34,7 +34,9 @@ const useEmployees = (): [Status, Employee[], Employee[], Employee[]] => {
   });
 
   useEffect(() => {
-    dispatch(getEmployees());
+    if (allEmployees.length === 0) {
+      dispatch(getEmployees());
+    }
   }, []);
 
   return [status, allEmployees, currentYearEmployees, nextYearEmployees];

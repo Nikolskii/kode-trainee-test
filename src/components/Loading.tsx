@@ -4,7 +4,7 @@ import loadingImg from '../images/loading-img.svg';
 
 const StyledLoading = styled.img`
   width: 343px;
-  height: 84px;
+  height: 72px;
 `;
 
 const Loading = () => {

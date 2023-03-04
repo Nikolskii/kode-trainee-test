@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import ErrorMessage from './components/ErrorMessage/ErrorMessage';
 
+import ErrorMessage from './components/ErrorMessage/ErrorMessage';
 import EmployeePage from './pages/EmployeePage';
 import EmployeesPage from './pages/EmployeesPage';
 
