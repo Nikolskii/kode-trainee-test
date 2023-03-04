@@ -2,6 +2,8 @@ import { RootState } from '../../app/store';
 
 import { ControlsSlice } from '../controls/controlsSlice';
 
+export const selectStatusLoading = (state: RootState) => state.employees.status;
+
 export const selectSortedEmployees = (
   state: RootState,
   { search, sort, departament }: ControlsSlice,

@@ -4,17 +4,20 @@ import DividingLine from './DividingLine';
 import EmployeeCard from './EmployeeCard';
 
 const EmployeesList = () => {
-  const [allEmployees, currentYearEmployees, nextYearEmployees] =
+  const [status, allEmployees, currentYearEmployees, nextYearEmployees] =
     useEmployees();
   const [sort, handleSort] = useSort();
 
   return (
     <>
-      {sort === 'alphabet' ? (
+      {/* Сортировка сотрудников по алфавиту */}
+      {sort === 'alphabet' &&
         allEmployees.map((employee) => (
           <EmployeeCard {...employee} key={employee.id} />
-        ))
-      ) : (
+        ))}
+
+      {/* Сортировка сотрудников по дню рождения */}
+      {sort === 'birthday' && (
         <>
           {currentYearEmployees.map((employee) => (
             <EmployeeCard {...employee} sort={sort} key={employee.id} />
@@ -25,7 +28,7 @@ const EmployeesList = () => {
             <EmployeeCard {...employee} sort={sort} key={employee.id} />
           ))}
         </>
-      )}{' '}
+      )}
     </>
   );
 };

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import useEmployees from '../useEmployees';
 import EmployeesList from './EmployeesList';
 import LoadingList from './LoadingList';
 
@@ -12,9 +13,13 @@ const StyledEmployees = styled.ul`
 `;
 
 const Employees = () => {
+  const [status] = useEmployees();
+
+  console.log(status);
+
   return (
     <StyledEmployees>
-      <LoadingList />
+      {status === 'loading' && <LoadingList />}
       <EmployeesList />
     </StyledEmployees>
   );

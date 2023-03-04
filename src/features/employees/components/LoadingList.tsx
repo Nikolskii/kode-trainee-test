@@ -5,7 +5,6 @@ const StyledLoadingList = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 12px;
-  margin-top: -6px;
 `;
 
 const LoadingList = () => {

@@ -3,22 +3,27 @@ import { useSelector } from 'react-redux';
 
 import { useAppDispatch } from '../../app/hooks';
 import { RootState } from '../../app/store';
-import { Employee } from '../../types';
+import { Employee, Status } from '../../types';
 import { selectControls } from '../controls/controlsSelectors';
 import { getEmployees } from './employeesAsyncActions';
-import { selectSortedEmployees } from './employeesSelectors';
+import {
+  selectSortedEmployees,
+  selectStatusLoading,
+} from './employeesSelectors';
 
-const useEmployees = (): [Employee[], Employee[], Employee[]] => {
+const useEmployees = (): [Status, Employee[], Employee[], Employee[]] => {
   const dispatch = useAppDispatch();
   const controls = useSelector(selectControls);
+  const status = useSelector(selectStatusLoading);
 
-  const currentDate = new Date().toISOString().slice(5, 10);
   const currentYearEmployees: Employee[] = [];
   const nextYearEmployees: Employee[] = [];
 
   const allEmployees = useSelector((state: RootState) =>
     selectSortedEmployees(state, controls),
   );
+
+  const currentDate = new Date().toISOString().slice(5, 10);
 
   allEmployees.forEach((employee) => {
     if (employee.birthday.slice(5, 10) < currentDate) {
@@ -32,7 +37,7 @@ const useEmployees = (): [Employee[], Employee[], Employee[]] => {
     dispatch(getEmployees());
   }, []);
 
-  return [allEmployees, currentYearEmployees, nextYearEmployees];
+  return [status, allEmployees, currentYearEmployees, nextYearEmployees];
 };
 
 export default useEmployees;

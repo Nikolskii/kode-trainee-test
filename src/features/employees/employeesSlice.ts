@@ -21,13 +21,13 @@ const employeesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getEmployees.pending, (state) => {
-      // console.log('pending...');
+      state.status = 'loading';
     });
     builder.addCase(getEmployees.rejected, (state) => {
-      // console.log('rejected...');
+      state.status = 'rejected';
     });
     builder.addCase(getEmployees.fulfilled, (state, action) => {
-      // console.log('its ok...');
+      state.status = 'received';
       state.list = action.payload.data.items;
     });
   },
