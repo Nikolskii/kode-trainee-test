@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 
 import sortIcon from '../../../../images/sort-icon.svg';
+import sortIconActive from '../../../../images/sort-icon-active.svg';
 
-export const SortButton = styled.button`
+interface SortButtonProps {
+  active: boolean;
+}
+
+export const SortButton = styled.button<SortButtonProps>`
   width: 21px;
   height: 12px;
-  background: url(${sortIcon}) no-repeat;
+  background: ${({ active }) =>
+    active ? `url(${sortIconActive})` : `url(${sortIcon})`};
+  background-repeat: no-repeat;
   border: none;
   transition: opacity 0.4s;
   &:hover {

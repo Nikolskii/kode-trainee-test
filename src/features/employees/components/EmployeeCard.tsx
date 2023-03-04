@@ -8,8 +8,13 @@ import Position from './Position';
 import Tag from './Tag';
 
 const StyledEmployeeCard = styled.article`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 72px auto auto;
+  grid-template-columns: 72px auto;
   grid-template-rows: auto auto;
   column-gap: 16px;
   row-gap: 2px;
@@ -29,12 +34,14 @@ const EmployeeCard = (props: EmployeeProps) => {
 
   return (
     <StyledEmployeeCard>
-      <Avatar src={avatarUrl} />
-      <Name>
-        {firstName} {lastName}
-        <Tag>{userTag}</Tag>
-      </Name>
-      <Position>{position}</Position>
+      <Wrapper>
+        <Avatar src={avatarUrl} />
+        <Name>
+          {firstName} {lastName}
+          <Tag>{userTag}</Tag>
+        </Name>
+        <Position>{position}</Position>
+      </Wrapper>
       {sort === 'birthday' && <Birthday>{formattedDateBirthday}</Birthday>}
     </StyledEmployeeCard>
   );
