@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
+
 import BackButton from './BackButton';
 
 const StyledHeader = styled.header`
