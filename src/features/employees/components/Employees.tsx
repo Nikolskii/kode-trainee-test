@@ -20,7 +20,9 @@ const Employees = () => {
     <StyledEmployees>
       {status === 'loading' && <LoadingList />}
       {status === 'rejected' && <ErrorMessage isError />}
-      {allEmployees.length === 0 && <ErrorMessage isEmployeesNotFound />}
+      {allEmployees.length === 0 && status !== 'loading' && (
+        <ErrorMessage isEmployeesNotFound />
+      )}
       <EmployeesList />
     </StyledEmployees>
   );
