@@ -4,6 +4,8 @@ import { ControlsSlice } from '../controls/controlsSlice';
 
 export const selectStatusLoading = (state: RootState) => state.employees.status;
 
+export const selectAllEmployees = (state: RootState) => state.employees.list;
+
 export const selectSortedEmployees = (
   state: RootState,
   { search, sort, departament }: ControlsSlice,

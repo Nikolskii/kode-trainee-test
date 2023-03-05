@@ -4,20 +4,25 @@ import Birthday from './Birthday';
 import Phone from './Phone';
 import Wrapper from './Wrapper';
 
+interface SecondaryInfoProps {
+  birthday: string | undefined;
+  phone: string | undefined;
+}
+
 const StyledSecondaryInfo = styled.section`
   padding: 6px 18px;
   display: flex;
   flex-direction: column;
 `;
 
-const SecondaryInfo = () => {
+const SecondaryInfo = (props: SecondaryInfoProps) => {
   return (
     <StyledSecondaryInfo>
       <Wrapper>
-        <Birthday>5 июня 1996</Birthday>
-        <Age>24 года</Age>
+        <Birthday>{props.birthday}</Birthday>
+        <Age>0 года</Age>
       </Wrapper>
-      <Phone>+7 (999) 900 90 90</Phone>
+      <Phone>{props.phone}</Phone>
     </StyledSecondaryInfo>
   );
 };

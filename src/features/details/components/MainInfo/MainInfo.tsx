@@ -6,6 +6,14 @@ import Position from './Position';
 import Tag from './Tag';
 import Wrapper from './Wrapper';
 
+interface MainInfoProps {
+  avatarUrl: string | undefined;
+  firstName: string | undefined;
+  lastName: string | undefined;
+  userTag: string | undefined;
+  position: string | undefined;
+}
+
 const StyledMainInfo = styled.section`
   background-color: var(--colors-rest-secondary);
   padding: 4px 0 24px;
@@ -15,15 +23,17 @@ const StyledMainInfo = styled.section`
   row-gap: 12px;
 `;
 
-const MainInfo = () => {
+const MainInfo = (props: MainInfoProps) => {
   return (
     <StyledMainInfo>
-      <Avatar src="https://avatars.githubusercontent.com/u/15583900?v=4" />
+      <Avatar src={props.avatarUrl} />
       <Wrapper>
-        <Title>Денис Никольский</Title>
-        <Tag>dn</Tag>
+        <Title>
+          {props.firstName} {props.lastName}
+        </Title>
+        <Tag>{props.userTag}</Tag>
       </Wrapper>
-      <Position>Developer</Position>
+      <Position>{props.position}</Position>
     </StyledMainInfo>
   );
 };
