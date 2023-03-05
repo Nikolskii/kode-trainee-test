@@ -5,8 +5,9 @@ import Phone from './Phone';
 import Wrapper from './Wrapper';
 
 interface SecondaryInfoProps {
-  birthday: string | undefined;
-  phone: string | undefined;
+  birthday: string;
+  phone: string;
+  age: string;
 }
 
 const StyledSecondaryInfo = styled.section`
@@ -20,7 +21,7 @@ const SecondaryInfo = (props: SecondaryInfoProps) => {
     <StyledSecondaryInfo>
       <Wrapper>
         <Birthday>{props.birthday}</Birthday>
-        <Age>0 года</Age>
+        <Age>{props.age}</Age>
       </Wrapper>
       <Phone>{props.phone}</Phone>
     </StyledSecondaryInfo>

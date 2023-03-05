@@ -3,7 +3,7 @@ import MainInfo from './MainInfo/MainInfo';
 import SecondaryInfo from './SecondaryInfo/SecondaryInfo';
 
 const EmployeeDetails = () => {
-  const [employee] = useDetails();
+  const [employee, birthday, phoneNumber, age] = useDetails();
 
   return (
     <div>
@@ -16,7 +16,7 @@ const EmployeeDetails = () => {
             userTag={employee.userTag}
             position={employee.position}
           />
-          <SecondaryInfo birthday={employee.birthday} phone={employee.phone} />
+          <SecondaryInfo birthday={birthday} phone={phoneNumber} age={age} />
         </>
       )}
     </div>
