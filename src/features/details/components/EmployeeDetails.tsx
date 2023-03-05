@@ -16,7 +16,12 @@ const EmployeeDetails = () => {
             userTag={employee.userTag}
             position={employee.position}
           />
-          <SecondaryInfo birthday={birthday} phone={phoneNumber} age={age} />
+          <SecondaryInfo
+            birthday={birthday}
+            phone={employee.phone}
+            formatedPhone={phoneNumber}
+            age={age}
+          />
         </>
       )}
     </div>

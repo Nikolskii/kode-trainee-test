@@ -7,6 +7,7 @@ import Wrapper from './Wrapper';
 interface SecondaryInfoProps {
   birthday: string;
   phone: string;
+  formatedPhone: string;
   age: string;
 }
 
@@ -23,7 +24,7 @@ const SecondaryInfo = (props: SecondaryInfoProps) => {
         <Birthday>{props.birthday}</Birthday>
         <Age>{props.age}</Age>
       </Wrapper>
-      <Phone>{props.phone}</Phone>
+      <Phone href={`tel:${props.phone}`}>{props.formatedPhone}</Phone>
     </StyledSecondaryInfo>
   );
 };
