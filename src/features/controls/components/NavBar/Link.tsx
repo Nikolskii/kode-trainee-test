@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-
-interface LinkProps {
-  active: boolean;
-}
+import LinkProps from '../../../../interfaces/LinkProps';
 
 export const Link = styled.button<LinkProps>`
   border: none;

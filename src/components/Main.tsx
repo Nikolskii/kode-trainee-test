@@ -1,8 +1,4 @@
-import { ReactNode } from 'react';
-
-interface MainProps {
-  children?: ReactNode;
-}
+import MainProps from '../interfaces/MainProps';
 
 const Main = ({ children }: MainProps) => {
   return <main>{children}</main>;

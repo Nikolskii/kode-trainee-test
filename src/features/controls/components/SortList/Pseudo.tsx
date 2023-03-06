@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-
-interface PseudoProps {
-  isChecked: boolean;
-}
+import PseudoProps from '../../../../interfaces/PseudoProps';
 
 export const Pseudo = styled.span<PseudoProps>`
   display: inline-block;

@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-
-interface StyledModalProps {
-  isOpen: boolean;
-}
+import StyledModalProps from '../../../interfaces/StyledModalProps';
 
 export const StyledModal = styled.div<StyledModalProps>`
   width: 100%;

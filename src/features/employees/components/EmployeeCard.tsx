@@ -1,21 +1,11 @@
-import styled from 'styled-components';
-
-import { Employee } from '../../../types';
+import EmployeeProps from '../../../interfaces/EmployeeProps';
 import Avatar from './Avatar';
 import Birthday from './Birthday';
 import Name from './Name';
 import Position from './Position';
+import StyledEmployeeCard from './StyledEmployeeCard';
 import StyledLink from './StyledLink';
 import Tag from './Tag';
-
-interface EmployeeProps extends Employee {
-  sort?: string;
-}
-
-const StyledEmployeeCard = styled.article`
-  display: flex;
-  justify-content: space-between;
-`;
 
 const EmployeeCard = (props: EmployeeProps) => {
   const {

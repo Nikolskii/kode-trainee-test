@@ -1,17 +1,10 @@
+import MainInfoProps from '../../../../interfaces/MainInfoProps';
 import Avatar from './Avatar';
 import Position from './Position';
 import StyledMainInfo from './StyledMainInfo';
 import Tag from './Tag';
 import Title from './Title';
 import Wrapper from './Wrapper';
-
-interface MainInfoProps {
-  avatarUrl: string | undefined;
-  firstName: string | undefined;
-  lastName: string | undefined;
-  userTag: string | undefined;
-  position: string | undefined;
-}
 
 const MainInfo = (props: MainInfoProps) => {
   return (

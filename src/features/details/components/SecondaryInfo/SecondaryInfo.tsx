@@ -1,15 +1,9 @@
+import SecondaryInfoProps from '../../../../interfaces/SecondaryInfoProps';
 import Age from './Age';
 import Birthday from './Birthday';
 import Phone from './Phone';
 import StyledSecondaryInfo from './StyledSecondaryInfo';
 import Wrapper from './Wrapper';
-
-interface SecondaryInfoProps {
-  birthday: string;
-  phone: string;
-  formatedPhone: string;
-  age: string;
-}
 
 const SecondaryInfo = (props: SecondaryInfoProps) => {
   return (

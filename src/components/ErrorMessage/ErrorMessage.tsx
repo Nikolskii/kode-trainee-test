@@ -7,12 +7,7 @@ import { Title } from './Title';
 import errorImg from '../../images/error-img.svg';
 import notFoundImg from '../../images/not-found-error.svg';
 import StyledErrorMessage from './StyledErrorMessage';
-
-interface ErrorMessageProps {
-  isError?: boolean;
-  isEmployeesNotFound?: boolean;
-  isPageNotFound?: boolean;
-}
+import ErrorMessageProps from '../../interfaces/ErrorMessageProps';
 
 const ErrorMessage = ({
   isError,

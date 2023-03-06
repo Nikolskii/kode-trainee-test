@@ -3,13 +3,7 @@ import styled from 'styled-components';
 import Input from './Input';
 import { Pseudo } from './Pseudo';
 import { OptionName } from './OptionName';
-
-interface SortOptionProps {
-  option: string;
-  isChecked: boolean;
-  optionName: string;
-  onClick: () => void;
-}
+import SortOptionProps from '../../../../interfaces/SortOptionProps';
 
 const StyledSortOption = styled.label`
   display: block;

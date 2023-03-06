@@ -1,9 +1,5 @@
-import { ReactNode } from 'react';
 import styled from 'styled-components';
-
-interface FormProps {
-  children: ReactNode;
-}
+import FormProps from '../../../../interfaces/FormProps';
 
 const StyledForm = styled.form`
   width: 100%;
