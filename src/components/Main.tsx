@@ -6,12 +6,7 @@ interface MainProps {
 }
 
 const Main = ({ children }: MainProps) => {
-  return (
-    <main>
-      {/* <ErrorMessage isUserNotFound /> */}
-      {children}
-    </main>
-  );
+  return <main>{children}</main>;
 };
 
 export default Main;
