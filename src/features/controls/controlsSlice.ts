@@ -1,13 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+import ControlsSlice from '../../types/controlsSlice';
 import Departament from '../../types/departament';
 import SortValue from '../../types/sortValue';
-
-export type ControlsSlice = {
-  search: string;
-  sort: SortValue;
-  departament: Departament;
-};
 
 const initialState: ControlsSlice = {
   search: '',
