@@ -1,4 +1,4 @@
-import { NavBarList } from './NavBarList';
+import NavBarList from './NavBarList';
 import LinksList from './LinksList';
 
 const NavBar = () => {

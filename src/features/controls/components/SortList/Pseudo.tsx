@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PseudoProps from '../../../../interfaces/PseudoProps';
 
-export const Pseudo = styled.span<PseudoProps>`
+const Pseudo = styled.span<PseudoProps>`
   display: inline-block;
   box-sizing: border-box;
   vertical-align: middle;
@@ -11,3 +11,5 @@ export const Pseudo = styled.span<PseudoProps>`
     var(--colors-accent);
   border-radius: 50%;
 `;
+
+export default Pseudo;

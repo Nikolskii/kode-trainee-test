@@ -1,6 +1,6 @@
-import { Title } from './Title';
-import { CloseButton } from './CloseButton';
-import { StyledModalDialog } from './StyledModalDialog';
+import Title from './Title';
+import CloseButton from './CloseButton';
+import StyledModalDialog from './StyledModalDialog';
 import useModal from '../useModal';
 import ModalProps from '../../../interfaces/ModalProps';
 

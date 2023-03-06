@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-
 import closeIcon from '../../../images/close-icon.svg';
 
-export const CloseButton = styled.button`
+const CloseButton = styled.button`
   position: absolute;
   top: 24px;
   right: 24px;
@@ -17,3 +16,5 @@ export const CloseButton = styled.button`
     cursor: pointer;
   }
 `;
+
+export default CloseButton;

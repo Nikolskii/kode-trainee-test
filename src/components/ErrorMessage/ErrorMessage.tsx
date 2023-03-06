@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 
-import { Button } from './Button';
-import { Img } from './Img';
-import { Subtitle } from './Subtitle';
-import { Title } from './Title';
+import Img from './Img';
+import Title from './Title';
+import Button from './Button';
+import Subtitle from './Subtitle';
 import errorImg from '../../images/error-img.svg';
 import notFoundImg from '../../images/not-found-error.svg';
 import StyledErrorMessage from './StyledErrorMessage';

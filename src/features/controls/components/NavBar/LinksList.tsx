@@ -1,6 +1,6 @@
-import useDepartament from '../../useDepartament';
 import { links } from '../../../../config';
-import { Link } from './Link';
+import useDepartament from '../../useDepartament';
+import Link from './Link';
 
 const LinksList = () => {
   const [departament, handleDepartament] = useDepartament();

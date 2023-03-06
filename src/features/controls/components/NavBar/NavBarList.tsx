@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NavBarList = styled.ul`
+const NavBarList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
@@ -10,3 +10,5 @@ export const NavBarList = styled.ul`
     flex-wrap: wrap;
   }
 `;
+
+export default NavBarList;

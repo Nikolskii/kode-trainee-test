@@ -4,7 +4,7 @@ import sortIcon from '../../../../images/sort-icon.svg';
 import sortIconActive from '../../../../images/sort-icon-active.svg';
 import SortButtonProps from '../../../../interfaces/SortButtonProps';
 
-export const SortButton = styled.button<SortButtonProps>`
+const SortButton = styled.button<SortButtonProps>`
   width: 21px;
   height: 12px;
   background: ${({ active }) =>
@@ -17,3 +17,5 @@ export const SortButton = styled.button<SortButtonProps>`
     cursor: pointer;
   }
 `;
+
+export default SortButton;

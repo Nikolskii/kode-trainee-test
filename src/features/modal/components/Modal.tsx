@@ -1,7 +1,7 @@
 import ModalProps from '../../../interfaces/ModalProps';
 import useModal from '../useModal';
 import ModalDialog from './ModalDialog';
-import { StyledModal } from './StyledModal';
+import StyledModal from './StyledModal';
 
 const Modal = ({ children, title }: ModalProps) => {
   const [isOpen, toggleIsOpen] = useModal();

@@ -1,14 +1,7 @@
-import styled from 'styled-components';
-
 import { sortingOptions } from '../../../../config';
 import useSort from '../../useSort';
 import SortOption from './SortOption';
-
-const StyledSortList = styled.form`
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
-`;
+import StyledSortList from './StyledSortList';
 
 const SortList = () => {
   const [sort, handleSort] = useSort();

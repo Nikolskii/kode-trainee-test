@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledModalDialog = styled.div`
+const StyledModalDialog = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -14,3 +14,5 @@ export const StyledModalDialog = styled.div`
   flex-direction: column;
   row-gap: 36px;
 `;
+
+export default StyledModalDialog;

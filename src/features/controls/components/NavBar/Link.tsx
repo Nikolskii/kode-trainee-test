@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import LinkProps from '../../../../interfaces/LinkProps';
 
-export const Link = styled.button<LinkProps>`
+const Link = styled.button<LinkProps>`
   border: none;
   border-bottom: ${({ active }) =>
     active ? '2px solid var(--colors-accent)' : 'none'};
@@ -20,3 +20,5 @@ export const Link = styled.button<LinkProps>`
     cursor: pointer;
   }
 `;
+
+export default Link;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import StyledModalProps from '../../../interfaces/StyledModalProps';
 
-export const StyledModal = styled.div<StyledModalProps>`
+const StyledModal = styled.div<StyledModalProps>`
   width: 100%;
   height: 100%;
   background-color: rgba(5, 5, 16, 0.16);
@@ -9,3 +9,5 @@ export const StyledModal = styled.div<StyledModalProps>`
   top: 0;
   left: 0;
 `;
+
+export default StyledModal;

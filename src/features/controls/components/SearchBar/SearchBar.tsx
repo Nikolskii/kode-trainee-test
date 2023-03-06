@@ -2,8 +2,8 @@ import useModal from '../../../modal/useModal';
 import useSearch from '../../useSearch';
 import useSort from '../../useSort';
 import Form from './Form';
-import { Input } from './Input';
-import { SortButton } from './SortButton';
+import Input from './Input';
+import SortButton from './SortButton';
 import StyledSearchBar from './StyledSearchBar';
 
 const SearchBar = () => {
