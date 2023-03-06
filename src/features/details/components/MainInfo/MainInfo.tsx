@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import Title from '../../../../components/Title';
 import Avatar from './Avatar';
 import Position from './Position';
 import Tag from './Tag';
+import Title from './Title';
 import Wrapper from './Wrapper';
 
 interface MainInfoProps {

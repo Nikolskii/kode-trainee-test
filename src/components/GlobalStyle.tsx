@@ -21,6 +21,7 @@ const Styles = createGlobalStyle`
     /* Sizes */
     --sizes-min: 320px;
     --sizes-max: 1280px;
+    --sizes-mobile: 560px;
   }
 
   body {
