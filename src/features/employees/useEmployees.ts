@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux';
 
 import { useAppDispatch } from '../../app/hooks';
 import { RootState } from '../../app/store';
-import { Employee, Status } from '../../types';
+import Employee from '../../types/employee';
+import Status from '../../types/status';
 import { selectControls } from '../controls/controlsSelectors';
 import { getEmployees } from './employeesAsyncActions';
 import {

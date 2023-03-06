@@ -1,6 +1,8 @@
-export type SortValue = 'alphabet' | 'birthday';
+import SortValue from './sortValue';
 
-export type Sort = {
+type Sort = {
   name: string;
   value: SortValue;
 };
+
+export default Sort;

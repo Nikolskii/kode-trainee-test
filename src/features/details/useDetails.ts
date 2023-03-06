@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { selectAllEmployees } from '../employees/employeesSelectors';
-import { Employee } from '../../types';
 import { useAppDispatch } from '../../app/hooks';
 import { getEmployees } from '../employees/employeesAsyncActions';
+import Employee from '../../types/employee';
 
 const useDetails = (): [Employee | undefined, string, string, string] => {
   const dispatch = useAppDispatch();

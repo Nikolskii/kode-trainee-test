@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
 
 import { useAppDispatch } from '../../app/hooks';
-import { SortValue } from '../../types';
 import { toggleVisibility } from '../modal/modalSlice';
 import { selectSort } from './controlsSelectors';
 import { setSort } from './controlsSlice';
+import SortValue from '../../types/sortValue';
 
 const useSort = (): [SortValue, (sort: SortValue) => void] => {
   const dispatch = useAppDispatch();

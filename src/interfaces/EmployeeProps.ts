@@ -1,4 +1,4 @@
-import { Employee } from '../types';
+import Employee from '../types/employee';
 
 interface EmployeeProps extends Employee {
   sort?: string;

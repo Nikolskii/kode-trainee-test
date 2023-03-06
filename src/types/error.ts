@@ -1,1 +1,3 @@
-export type Error = string | null | undefined;
+type Error = string | null | undefined;
+
+export default Error;

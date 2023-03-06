@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import { useAppDispatch } from '../../app/hooks';
-import { Departament } from '../../types';
+import Departament from '../../types/departament';
 import { selectDepartment } from './controlsSelectors';
 import { setDepartament } from './controlsSlice';
 

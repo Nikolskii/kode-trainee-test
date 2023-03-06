@@ -1,4 +1,5 @@
-import { Link, Sort } from './types';
+import Link from './types/link';
+import Sort from './types/sort';
 
 const BASE_URL =
   'https://stoplight.io/mocks/kode-frontend-team/koder-stoplight/86566464/users?__example=';

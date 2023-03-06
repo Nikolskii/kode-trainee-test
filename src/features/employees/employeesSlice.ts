@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { Employee, Error, Status } from '../../types';
+import Employee from '../../types/employee';
+import Error from '../../types/error';
+import Status from '../../types/status';
 import { getEmployees } from './employeesAsyncActions';
 
 type EmployeesSlice = {
