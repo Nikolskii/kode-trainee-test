@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Departament } from '../../types';
 
 export type ControlsSlice = {
   search: string;
   sort: string;
-  departament: string;
+  departament: Departament;
 };
 
 const initialState: ControlsSlice = {
@@ -22,7 +23,7 @@ const controlsSlice = createSlice({
     setSort: (state, action: PayloadAction<string>) => {
       state.sort = action.payload;
     },
-    setDepartament: (state, action: PayloadAction<string>) => {
+    setDepartament: (state, action: PayloadAction<Departament>) => {
       state.departament = action.payload;
     },
   },

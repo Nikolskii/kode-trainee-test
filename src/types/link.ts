@@ -1,4 +1,14 @@
+import { Departament } from './departament';
+
+export type LinkName =
+  | 'Все'
+  | 'Designers'
+  | 'Analysts'
+  | 'Managers'
+  | 'iOS'
+  | 'Android';
+
 export type Link = {
-  name: string;
-  path: string;
+  name: LinkName;
+  path: Departament;
 };

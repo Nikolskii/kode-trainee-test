@@ -6,7 +6,23 @@
 
 [Макет в Figma](https://www.figma.com/file/GRRKONipVClULsfdCAuVs1/KODE-Trainee-Dev-Осень'21?node-id=11%3A14414)
 
-[Спецификация метода API](https://kode-frontend-team.stoplight.io/docs/koder-stoplight/e981f97438300-get-users-list)
+### Функционал:
+
+- Поиск, фильтр и сортировка списка сотрудников
+
+- Просмотр страницы деталей сотрудника
+
+### Технологии
+
+- React, React Redux, React Router
+
+- Styled-components
+
+- Axios
+
+- Адаптивная верстка CSS (Flexbox, Grid Layout, Media Queries)
+
+- Продвинутая семантика HTML
 
 ### Инструкции
 
