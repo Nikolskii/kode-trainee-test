@@ -7,7 +7,7 @@ import Subtitle from './Subtitle';
 import errorImg from '../../images/error-img.svg';
 import notFoundImg from '../../images/not-found-error.svg';
 import StyledErrorMessage from './StyledErrorMessage';
-import ErrorMessageProps from '../../interfaces/ErrorMessageProps';
+import ErrorMessageProps from '../../interfaces/errorMessageProps';
 
 const ErrorMessage = ({
   isError,

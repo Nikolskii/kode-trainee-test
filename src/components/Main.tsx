@@ -1,4 +1,4 @@
-import MainProps from '../interfaces/MainProps';
+import MainProps from '../interfaces/mainProps';
 
 const Main = ({ children }: MainProps) => {
   return <main>{children}</main>;

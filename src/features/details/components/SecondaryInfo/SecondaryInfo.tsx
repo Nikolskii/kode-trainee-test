@@ -1,4 +1,4 @@
-import SecondaryInfoProps from '../../../../interfaces/SecondaryInfoProps';
+import SecondaryInfoProps from '../../../../interfaces/secondaryInfoProps';
 import Age from './Age';
 import Birthday from './Birthday';
 import Phone from './Phone';

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Input from './Input';
 import Pseudo from './Pseudo';
 import OptionName from './OptionName';
-import SortOptionProps from '../../../../interfaces/SortOptionProps';
+import SortOptionProps from '../../../../interfaces/sortOptionProps';
 
 const StyledSortOption = styled.label`
   display: block;

@@ -1,4 +1,4 @@
-import MainInfoProps from '../../../../interfaces/MainInfoProps';
+import MainInfoProps from '../../../../interfaces/mainInfoProps';
 import Avatar from './Avatar';
 import Position from './Position';
 import StyledMainInfo from './StyledMainInfo';

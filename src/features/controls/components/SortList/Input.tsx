@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import InputProps from '../../../../interfaces/InputProps';
+import InputProps from '../../../../interfaces/inputProps';
 
 const StyledInput = styled.input.attrs({
   type: 'radio',

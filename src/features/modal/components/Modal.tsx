@@ -1,4 +1,4 @@
-import ModalProps from '../../../interfaces/ModalProps';
+import ModalProps from '../../../interfaces/modalProps';
 import useModal from '../useModal';
 import ModalDialog from './ModalDialog';
 import StyledModal from './StyledModal';

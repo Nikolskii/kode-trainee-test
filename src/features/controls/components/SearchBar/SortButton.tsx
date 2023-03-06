@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import sortIcon from '../../../../images/sort-icon.svg';
 import sortIconActive from '../../../../images/sort-icon-active.svg';
-import SortButtonProps from '../../../../interfaces/SortButtonProps';
+import SortButtonProps from '../../../../interfaces/sortButtonProps';
 
 const SortButton = styled.button<SortButtonProps>`
   width: 21px;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import PseudoProps from '../../../../interfaces/PseudoProps';
+import PseudoProps from '../../../../interfaces/pseudoProps';
 
 const Pseudo = styled.span<PseudoProps>`
   display: inline-block;

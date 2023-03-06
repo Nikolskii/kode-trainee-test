@@ -1,4 +1,4 @@
-import EmployeeProps from '../../../interfaces/EmployeeProps';
+import EmployeeProps from '../../../interfaces/employeeProps';
 import Avatar from './Avatar';
 import Birthday from './Birthday';
 import Name from './Name';

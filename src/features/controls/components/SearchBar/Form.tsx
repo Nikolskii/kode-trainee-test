@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import FormProps from '../../../../interfaces/FormProps';
+import FormProps from '../../../../interfaces/formProps';
 
 const StyledForm = styled.form`
   width: 100%;
