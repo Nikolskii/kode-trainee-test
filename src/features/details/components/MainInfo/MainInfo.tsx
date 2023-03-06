@@ -1,7 +1,6 @@
-import styled from 'styled-components';
-
 import Avatar from './Avatar';
 import Position from './Position';
+import StyledMainInfo from './StyledMainInfo';
 import Tag from './Tag';
 import Title from './Title';
 import Wrapper from './Wrapper';
@@ -13,15 +12,6 @@ interface MainInfoProps {
   userTag: string | undefined;
   position: string | undefined;
 }
-
-const StyledMainInfo = styled.section`
-  background-color: var(--colors-rest-secondary);
-  padding: 4px 0 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 12px;
-`;
 
 const MainInfo = (props: MainInfoProps) => {
   return (

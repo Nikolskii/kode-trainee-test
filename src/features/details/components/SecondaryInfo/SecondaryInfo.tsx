@@ -1,7 +1,7 @@
-import styled from 'styled-components';
 import Age from './Age';
 import Birthday from './Birthday';
 import Phone from './Phone';
+import StyledSecondaryInfo from './StyledSecondaryInfo';
 import Wrapper from './Wrapper';
 
 interface SecondaryInfoProps {
@@ -10,12 +10,6 @@ interface SecondaryInfoProps {
   formatedPhone: string;
   age: string;
 }
-
-const StyledSecondaryInfo = styled.section`
-  padding: 6px 18px;
-  display: flex;
-  flex-direction: column;
-`;
 
 const SecondaryInfo = (props: SecondaryInfoProps) => {
   return (

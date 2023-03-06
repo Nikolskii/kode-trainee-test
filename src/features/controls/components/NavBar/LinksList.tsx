@@ -1,5 +1,5 @@
-import { links } from '../../../../config';
 import useDepartament from '../../useDepartament';
+import { links } from '../../../../config';
 import { Link } from './Link';
 
 const LinksList = () => {

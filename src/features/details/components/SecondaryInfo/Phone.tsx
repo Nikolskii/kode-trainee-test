@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import phoneIcon from '../../../../images/phone-icon.svg';
 
 const Phone = styled.a`

@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import backIcon from '../images/back-icon.svg';
 
 const BackButton = styled(Link)`

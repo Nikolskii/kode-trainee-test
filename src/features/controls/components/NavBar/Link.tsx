@@ -12,11 +12,10 @@ export const Link = styled.button<LinkProps>`
     active ? 'var(--text-color-primary)' : 'var(--text-color-secondary-light)'};
   font-weight: ${({ active }) => (active ? 600 : 500)};
   background-color: transparent;
-  padding: 0;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
-  padding: 0px 12px 7px;
+  padding: 5px 12px 7px;
   transition: opacity 0.4s;
 
   &:hover {

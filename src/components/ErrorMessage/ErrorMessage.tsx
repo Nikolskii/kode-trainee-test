@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
 
 import { Button } from './Button';
 import { Img } from './Img';
@@ -7,20 +6,13 @@ import { Subtitle } from './Subtitle';
 import { Title } from './Title';
 import errorImg from '../../images/error-img.svg';
 import notFoundImg from '../../images/not-found-error.svg';
+import StyledErrorMessage from './StyledErrorMessage';
 
 interface ErrorMessageProps {
   isError?: boolean;
   isEmployeesNotFound?: boolean;
   isPageNotFound?: boolean;
 }
-
-const StyledErrorMessage = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 12px;
-  padding: 133px 20px;
-`;
 
 const ErrorMessage = ({
   isError,

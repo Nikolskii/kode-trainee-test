@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import ErrorMessage from './ErrorMessage/ErrorMessage';
 
 interface MainProps {
   children?: ReactNode;

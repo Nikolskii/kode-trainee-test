@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from 'react';
-
 import { useSelector } from 'react-redux';
+
 import { useAppDispatch } from '../../app/hooks';
 import { selectSearch } from './controlsSelectors';
 import { setSearch } from './controlsSlice';

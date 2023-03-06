@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import Loading from '../../../components/Loading';
 
 const StyledLoadingList = styled.div`

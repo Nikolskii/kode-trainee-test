@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import starIcon from '../../../../images/star-icon.svg';
 
 const Birthday = styled.p`

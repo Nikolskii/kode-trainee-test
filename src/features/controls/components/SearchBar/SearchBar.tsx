@@ -1,20 +1,10 @@
-import styled from 'styled-components';
-
 import useModal from '../../../modal/useModal';
 import useSearch from '../../useSearch';
 import useSort from '../../useSort';
 import Form from './Form';
 import { Input } from './Input';
 import { SortButton } from './SortButton';
-
-const StyledSearchBar = styled.section`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 14px;
-  background-color: var(--colors-rest-secondary);
-  border-radius: 16px;
-`;
+import StyledSearchBar from './StyledSearchBar';
 
 const SearchBar = () => {
   const [isOpen, toggleIsOpen] = useModal();

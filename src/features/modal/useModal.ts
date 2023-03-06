@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+
 import { useAppDispatch } from '../../app/hooks';
 import { isModalOpen } from './modalSelectors';
 import { toggleVisibility } from './modalSlice';
