@@ -1,4 +1,6 @@
+export type SortValue = 'alphabet' | 'birthday';
+
 export type Sort = {
   name: string;
-  value: string;
+  value: SortValue;
 };
